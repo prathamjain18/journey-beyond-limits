@@ -23,7 +23,9 @@ const Header = () => {
               <li>
                 <NavLink to="/team" activeClassName="text-blue-500">Team</NavLink>
               </li>
-              {/* Add more links as needed */}
+              <li>
+                <NavLink to="/getInvolved" activeClassName="text-blue-500">Get Involved</NavLink>
+              </li>
             </ul>
           </nav>
         </div>

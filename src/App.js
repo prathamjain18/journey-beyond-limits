@@ -6,6 +6,7 @@ import Services from './Pages/Services';
 import About from './Pages/About';
 import Footer from './Pages/Footer';
 import Team from './Pages/Team';
+import GetInvolved from './Pages/GetInvolved';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/services" component={Services} />
             <Route path="/About" component={About} />
             <Route exact path="/Team" component={Team} />
+            <Route exact path="/GetInvolved" component={GetInvolved} />
           </Switch>
         </main>
         <Footer/>
