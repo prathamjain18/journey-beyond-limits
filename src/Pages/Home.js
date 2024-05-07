@@ -15,7 +15,7 @@ const Home = () => {
           </p>
           <div>
             <a
-              href="/services"
+              href="./services"
               className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white"
             >
               Learn More
@@ -79,7 +79,7 @@ const Home = () => {
           </p>
           <div>
             <a
-              href="/team"
+              href="./team"
               className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white"
             >
               Get in Touch
