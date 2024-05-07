@@ -1,5 +1,6 @@
 // Home.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Home = () => {
   return (
@@ -14,12 +15,9 @@ const Home = () => {
             Empowering disabled children to transition to adulthood with confidence and support.
           </p>
           <div>
-            <a
-              href="./services"
-              className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white"
-            >
+            <Link to="/services" className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white">
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -78,12 +76,9 @@ const Home = () => {
             Contact us today to learn more about how we can support your child's transition to adulthood.
           </p>
           <div>
-            <a
-              href="./team"
-              className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white"
-            >
+            <Link to="/team" className="bg-white text-blue-500 font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 ease-in-out hover:bg-blue-600 hover:text-white">
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </div>
