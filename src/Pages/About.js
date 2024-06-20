@@ -19,14 +19,13 @@ const About = () => {
         <div className="flex flex-col md:flex-row md:space-x-12">
           <div className="md:w-1/3">
             <animated.img
-              src="https://media.actionforchildren.org.uk/images/happy_boy_in_a_wheelchair.width-1000.jpg"
+              src="https://www.shutterstock.com/image-photo/cute-little-girl-painted-hand-600nw-281359508.jpg"
               alt="About Us"
               className="rounded-lg shadow-lg w-full mb-4"
               style={{ ...parallaxImage, ...fadeAnimation }}
             />
             <animated.img
-              src="https://www.unicef.ca/sites/default/files/styles/share_fb/public/blog_feature_image/unicef_disability_day.jpg?itok=1nEbTDnZ"
-              alt="About Us"
+              src="https://images.unsplash.com/photo-1464998857633-50e59fbf2fe6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About Us"
               className="rounded-lg shadow-lg w-full mb-4"
               style={{ ...parallaxImage, ...fadeAnimation }}
             />
@@ -36,16 +35,21 @@ const About = () => {
               className="rounded-lg shadow-lg w-full mb-4"
               style={{ ...parallaxImage, ...fadeAnimation }}
             />
+            <animated.img
+              src="https://images.unsplash.com/photo-1536825919521-ab78da56193b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  alt="About Us"
+              className="rounded-lg shadow-lg w-full mb-4"
+              style={{ ...parallaxImage, ...fadeAnimation }}
+            />
           </div>
           <animated.div className="md:w-1/2 mt-8 md:mt-0" style={slideAnimation}>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="bg-white p-8 text-lg rounded-lg shadow-lg mb-8">
               At Journey Beyond Limits, our mission is to provide comprehensive services and support to disabled children
               as they transition into adulthood. We strive to empower each individual to reach their full potential and lead
               fulfilling lives.
             </p>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Who We Are</h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="bg-white p-8 text-lg rounded-lg shadow-lg mb-8">
               We are a dedicated team of professionals including educators, therapists, social workers, and advocates who are
               passionate about making a positive difference in the lives of disabled children and their families. With years
               of experience and expertise, we are committed to offering personalized services tailored to meet the unique
@@ -53,41 +57,22 @@ const About = () => {
             </p>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Values</h3>
             <ul className="list-disc text-gray-700 pl-6 mb-6">
-              <li className="mb-2">Compassion</li>
-              <li className="mb-2">Inclusivity</li>
-              <li className="mb-2">Empowerment</li>
-              <li className="mb-2">Collaboration</li>
-              <li className="mb-2">Respect</li>
+              <p className="bg-white p-8 rounded-lg shadow-lg mb-1 text-lg">Compassion</p>
+              <p className="bg-white p-8 rounded-lg shadow-lg mb-1 text-lg">Inclusivity</p>
+              <p className="bg-white p-8 rounded-lg shadow-lg mb-1 text-lg">Empowerment</p>
+              <p className="bg-white p-8 rounded-lg shadow-lg mb-1 text-lg">Collaboration</p>
+              <p className="bg-white p-8 rounded-lg shadow-lg mb-1 text-lg">Respect</p>
             </ul>
-            <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Our Impact</h3>
-            <div className="flex flex-col items-center mb-6">
-              <p className="text-gray-700">75% of our participants reported increased self-confidence</p>
-              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
-                <animated.div className="bg-blue-500 rounded-full h-4" style={{ ...fadeAnimation, width: '75%' }}></animated.div>
-              </div>
-            </div>
-            <div className="flex flex-col items-center mb-6">
-              <p className="text-gray-700">50% increase in educational achievements</p>
-              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
-                <animated.div className="bg-blue-500 rounded-full h-4" style={{ ...fadeAnimation, width: '50%' }}></animated.div>
-              </div>
-            </div>
-            <div className="flex flex-col items-center mb-6">
-              <p className="text-gray-700">80% of families reported improved quality of life</p>
-              <div className="w-full bg-gray-300 rounded-full h-4 mb-2">
-                <animated.div className="bg-blue-500 rounded-full h-4" style={{ ...fadeAnimation, width: '80%' }}></animated.div>
-              </div>
-            </div>
             <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Join Us</h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="bg-white p-8 rounded-lg shadow-lg mb-8 text-lg">
               We welcome passionate individuals who share our vision and values to join us in our journey. Whether you are
-              interested in volunteering, becoming a donor, or collaborating with us, there are various ways you can contribute
+              interested in volunteering, becoming a volunteer, or collaborating with us, there are various ways you can contribute
               to our cause. Together, we can make a difference and create a more inclusive society for all.
             </p>
             <div className="flex justify-center">
               <animated.a
                 href="/team"
-                className="bg-blue-500 text-white py-2 px-6 rounded-full text-lg hover:bg-blue-600 transition duration-300 hover:shadow-lg"
+                className="bg-blue-500 text-white py-2 px-6 rounded-full text-2xl hover:bg-blue-600 transition duration-300 hover:shadow-lg"
                 style={fadeAnimation}
               >
                 Get Involved / Ask questions

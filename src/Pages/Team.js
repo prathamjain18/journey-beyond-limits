@@ -8,7 +8,7 @@ const TeamPage = () => {
       name: 'John Doe',
       position: 'Transition Coordinator',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-600nw-1714666150.jpg',
+      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'john.doe@example.com'
     },
     {
@@ -16,7 +16,7 @@ const TeamPage = () => {
       name: 'Jane Smith',
       position: 'Educational Specialist',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://marketplace.canva.com/EAFqNrAJpQs/1/0/1600w/canva-neutral-pink-modern-circle-shape-linkedin-profile-picture-WAhofEY5L1U.jpg',
+      photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'jane.smith@example.com'
     },
     {
@@ -24,7 +24,7 @@ const TeamPage = () => {
       name: 'Emma Johnson',
       position: 'Therapist',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg',
+      photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'emma.johnson@example.com'
     },
     {
@@ -32,7 +32,7 @@ const TeamPage = () => {
       name: 'Michael Brown',
       position: 'Psychologist',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://a.storyblok.com/f/191576/1200x800/a3640fdc4c/profile_picture_maker_before.webp',
+      photo: 'https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'michael.brown@example.com'
     },
     {
@@ -40,7 +40,7 @@ const TeamPage = () => {
       name: 'Sarah Lee',
       position: 'Occupational Therapist',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://img.freepik.com/free-photo/young-beautiful-woman-smiling-posing-purple-wall_176420-2852.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1714089600&semt=ais',
+      photo: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'sarah.lee@example.com'
     },
     {
@@ -48,7 +48,7 @@ const TeamPage = () => {
       name: 'David Clark',
       position: 'Speech Therapist',
       bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget velit vel tortor efficitur malesuada.',
-      photo: 'https://thumbs.dreamstime.com/b/profile-picture-caucasian-male-employee-posing-office-happy-young-worker-look-camera-workplace-headshot-portrait-smiling-190186649.jpg',
+      photo: 'https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       email: 'david.clark@example.com'
     },
   ];

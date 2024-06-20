@@ -12,7 +12,6 @@ const GetInvolved = () => {
       message: '',
       subject: '',
       province: '',
-      age: '',
       healthQuestion: '',
       opportunitiesInterest: ''
     },
@@ -22,20 +21,14 @@ const GetInvolved = () => {
       message: Yup.string().required('Required'),
       subject: Yup.string().required('Required'),
       province: Yup.string().required('Required'),
-      age: Yup.number()
-        .required('Required')
-        .positive('Age must be a positive number')
-        .integer('Age must be an integer')
-        .min(1, 'Minimum age must be greater than 0'),
       healthQuestion: Yup.string(),
       opportunitiesInterest: Yup.string()
     }),
     onSubmit: (values, { resetForm }) => {
-      const emailLink = `mailto:pratham.jain@dal.ca?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(`
+      const emailLink = `mailto:Resasd@dal.ca?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(`
         Name: ${values.name}
         Email: ${values.email}
         Province: ${values.province}
-        Age: ${values.age}
         Subject: ${values.subject}
         Message: ${values.message}
         Health Question: ${values.healthQuestion}
@@ -129,22 +122,6 @@ const GetInvolved = () => {
               </select>
               {formik.touched.province && formik.errors.province ? (
                 <div className="text-red-600">{formik.errors.province}</div>
-              ) : null}
-            </div>
-            <div className="mb-6">
-              <label htmlFor="age" className="block text-gray-700 font-semibold mb-2">Age</label>
-              <input
-                id="age"
-                name="age"
-                type="number"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.age}
-                className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Enter your age"
-              />
-              {formik.touched.age && formik.errors.age ? (
-                <div className="text-red-600">{formik.errors.age}</div>
               ) : null}
             </div>
             <div className="mb-6">
