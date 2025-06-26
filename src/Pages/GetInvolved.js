@@ -66,7 +66,7 @@ const GetInvolved = () => {
     <main id="main-content" className="bg-gray-100 py-16" role="main">
       <div className="container mx-auto px-4">
         <animated.h2 className="text-3xl font-bold text-center text-gray-800 mb-8" style={fieldAnimation} id="get-involved-title" tabIndex="0">Get Involved</animated.h2>
-        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto" aria-labelledby="get-involved-title" role="form" noValidate>
+        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto" aria-labelledby="get-involved-title" noValidate>
           <animated.div style={fieldAnimation}>
             <div className="mb-6">
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name <span aria-hidden="true" className="text-red-600">*</span></label>
