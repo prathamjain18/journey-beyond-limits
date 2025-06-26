@@ -58,13 +58,13 @@ const GetInvolved = () => {
   });
 
   return (
-    <section className="bg-gray-100 py-16">
+    <main className="bg-gray-100 py-16" role="main">
       <div className="container mx-auto px-4">
-        <animated.h2 className="text-3xl font-bold text-center text-gray-800 mb-8" style={fieldAnimation}>Get Involved</animated.h2>
-        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto">
+        <animated.h2 className="text-3xl font-bold text-center text-gray-800 mb-8" style={fieldAnimation} id="get-involved-title" tabIndex="0">Get Involved</animated.h2>
+        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto" aria-labelledby="get-involved-title" role="form" noValidate>
           <animated.div style={fieldAnimation}>
             <div className="mb-6">
-              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
+              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name <span aria-hidden="true" className="text-red-600">*</span></label>
               <input
                 id="name"
                 name="name"
@@ -74,13 +74,15 @@ const GetInvolved = () => {
                 value={formik.values.name}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Enter your name"
+                aria-required="true"
+                aria-invalid={formik.touched.name && formik.errors.name ? "true" : "false"}
               />
               {formik.touched.name && formik.errors.name ? (
-                <div className="text-red-600">{formik.errors.name}</div>
+                <div className="text-red-600" role="alert">{formik.errors.name}</div>
               ) : null}
             </div>
             <div className="mb-6">
-              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email Address</label>
+              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email Address <span aria-hidden="true" className="text-red-600">*</span></label>
               <input
                 id="email"
                 name="email"
@@ -90,13 +92,16 @@ const GetInvolved = () => {
                 value={formik.values.email}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Enter your email"
+                aria-required="true"
+                aria-invalid={formik.touched.email && formik.errors.email ? "true" : "false"}
+                autoComplete="email"
               />
               {formik.touched.email && formik.errors.email ? (
-                <div className="text-red-600">{formik.errors.email}</div>
+                <div className="text-red-600" role="alert">{formik.errors.email}</div>
               ) : null}
             </div>
             <div className="mb-6">
-              <label htmlFor="province" className="block text-gray-700 font-semibold mb-2">Province</label>
+              <label htmlFor="province" className="block text-gray-700 font-semibold mb-2">Province <span aria-hidden="true" className="text-red-600">*</span></label>
               <select
                 id="province"
                 name="province"
@@ -104,6 +109,8 @@ const GetInvolved = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.province}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
+                aria-required="true"
+                aria-invalid={formik.touched.province && formik.errors.province ? "true" : "false"}
               >
                 <option value="">Select province</option>
                 <option value="Alberta">Alberta</option>
@@ -121,11 +128,11 @@ const GetInvolved = () => {
                 <option value="Yukon">Yukon</option>
               </select>
               {formik.touched.province && formik.errors.province ? (
-                <div className="text-red-600">{formik.errors.province}</div>
+                <div className="text-red-600" role="alert">{formik.errors.province}</div>
               ) : null}
             </div>
             <div className="mb-6">
-              <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject</label>
+              <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">Subject <span aria-hidden="true" className="text-red-600">*</span></label>
               <input
                 id="subject"
                 name="subject"
@@ -135,13 +142,15 @@ const GetInvolved = () => {
                 value={formik.values.subject}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Enter subject"
+                aria-required="true"
+                aria-invalid={formik.touched.subject && formik.errors.subject ? "true" : "false"}
               />
               {formik.touched.subject && formik.errors.subject ? (
-                <div className="text-red-600">{formik.errors.subject}</div>
+                <div className="text-red-600" role="alert">{formik.errors.subject}</div>
               ) : null}
             </div>
             <div className="mb-6">
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
+              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message <span aria-hidden="true" className="text-red-600">*</span></label>
               <textarea
                 id="message"
                 name="message"
@@ -151,9 +160,11 @@ const GetInvolved = () => {
                 value={formik.values.message}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Type your message here"
+                aria-required="true"
+                aria-invalid={formik.touched.message && formik.errors.message ? "true" : "false"}
               ></textarea>
               {formik.touched.message && formik.errors.message ? (
-                <div className="text-red-600">{formik.errors.message}</div>
+                <div className="text-red-600" role="alert">{formik.errors.message}</div>
               ) : null}
             </div>
             <div className="mb-6">
@@ -167,9 +178,11 @@ const GetInvolved = () => {
                 value={formik.values.healthQuestion}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Type your health-related question here"
+                aria-required="false"
+                aria-invalid={formik.touched.healthQuestion && formik.errors.healthQuestion ? "true" : "false"}
               ></textarea>
               {formik.touched.healthQuestion && formik.errors.healthQuestion ? (
-                <div className="text-red-600">{formik.errors.healthQuestion}</div>
+                <div className="text-red-600" role="alert">{formik.errors.healthQuestion}</div>
               ) : null}
             </div>
             <div className="mb-6">
@@ -183,16 +196,19 @@ const GetInvolved = () => {
                 value={formik.values.opportunitiesInterest}
                 className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"
                 placeholder="Describe your interest in opportunities (e.g., volunteering, job opportunities)"
+                aria-required="false"
+                aria-invalid={formik.touched.opportunitiesInterest && formik.errors.opportunitiesInterest ? "true" : "false"}
               ></textarea>
               {formik.touched.opportunitiesInterest && formik.errors.opportunitiesInterest ? (
-                <div className="text-red-600">{formik.errors.opportunitiesInterest}</div>
+                <div className="text-red-600" role="alert">{formik.errors.opportunitiesInterest}</div>
               ) : null}
             </div>
           </animated.div>
           <animated.button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-6 rounded-full text-lg hover:bg-blue-600 transition duration-300 hover:shadow-lg block w-full"
+            className="bg-blue-500 text-white py-2 px-6 rounded-full text-lg hover:bg-blue-600 transition duration-300 hover:shadow-lg block w-full focus:outline focus:ring-2 focus:ring-blue-700"
             style={fieldAnimation}
+            aria-label="Submit form"
           >
             Submit
           </animated.button>
@@ -202,7 +218,7 @@ const GetInvolved = () => {
           {submitted && <p>Thank you for your submission!</p>}
         </animated.div>
       </div>
-    </section>
+    </main>
   );
 }
 

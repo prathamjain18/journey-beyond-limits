@@ -63,25 +63,28 @@ const TeamPage = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Meet our team</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main className="container mx-auto px-4 py-8" role="main">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8" tabIndex="0" id="team-title">Meet our team</h2>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-labelledby="team-title">
         {teamMembers.map((member) => (
           <animated.div 
             key={member.id} 
-            className="group max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl transform hover:scale-105 transition duration-300 ease-in-out"
+            className="group max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl transform hover:scale-105 transition duration-300 ease-in-out focus-within:ring-2 focus-within:ring-blue-700"
             style={cardProps}
+            tabIndex="0"
+            role="region"
+            aria-label={member.name + ', ' + member.position}
           >
             <div className="md:flex">
               <div className="md:flex-shrink-0 relative overflow-hidden">
                 <img 
                   className="h-48 w-full object-cover md:w-48 transition duration-300 ease-in-out transform group-hover:scale-110"
                   src={member.photo}
-                  alt={member.name}
+                  alt={member.name + ', ' + member.position}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex justify-center items-center">
-                  <button className="text-white text-sm font-semibold px-4 py-2 rounded-full border border-white hover:bg-white hover:text-black transition duration-300 ease-in-out"
-                     onClick={() => handleContactClick(member.email)}>Contact {member.name}</button>
+                  <button className="text-white text-sm font-semibold px-4 py-2 rounded-full border border-white hover:bg-white hover:text-black transition duration-300 ease-in-out focus:outline focus:ring-2 focus:ring-blue-700"
+                     onClick={() => handleContactClick(member.email)} aria-label={`Contact ${member.name}`}>Contact {member.name}</button>
                 </div>
               </div>
               <div className="p-8">
@@ -92,8 +95,8 @@ const TeamPage = () => {
             </div>
           </animated.div>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

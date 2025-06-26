@@ -18,37 +18,42 @@ const ResearchProjects = () => {
   });
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <main className="bg-gray-100 min-h-screen" role="main">
       <div className="max-w-6xl mx-auto px-8 py-16">
-        <animated.h2 ref={ref} className="text-3xl font-bold text-center text-gray-800 mb-8" style={titleFadeAnimation}>
+        <animated.h2 ref={ref} className="text-3xl font-bold text-center text-gray-800 mb-8" style={titleFadeAnimation} id="research-title" tabIndex="0">
           Research
         </animated.h2>
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Empowering Newcomers for Recreation Leadership Project</h3>
-          <p className="text-gray-600 mb-4">Improving everyday lives</p>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4" tabIndex="0">Empowering Newcomers for Recreation Leadership Project</h3>
+          <p className="text-gray-600 mb-4">
+            Improving everyday lives
+          </p>
           <p className="text-gray-600">
-            As one of Canada’s leading research universities, Dalhousie attracts millions in research grants and awards annually. The School of Occupational Therapy is one of 8 schools and colleges in the Faculty of Health. Please see our faculty listing for current research interests.
+            As one of Canada's leading research universities, Dalhousie attracts millions in research grants and awards annually. The School of Occupational Therapy is one of 8 schools and colleges in the Faculty of Health. Please see our faculty listing for current research interests.
           </p>
           <p className="text-gray-600 mt-4">
-            If you are applying for our Master of Science - Occupational Science research thesis stream, please connect with the faculty member(s) who may be best suited to supervise you as you pursue your research interests. <a href="https://www.dal.ca/faculty/health/occupational-therapy/faculty-staff/faculty.html" className="text-blue-500">See profiles here</a>.
+            If you are applying for our Master of Science - Occupational Science research thesis stream, please connect with the faculty member(s) who may be best suited to supervise you as you pursue your research interests. <a href="https://www.dal.ca/faculty/health/occupational-therapy/faculty-staff/faculty.html" className="text-blue-500 underline focus:outline focus:ring-2 focus:ring-blue-700" tabIndex="0">See profiles here</a>.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-labelledby="research-title">
           {/* Research Project Cards */}
           {projectsData.map((project, index) => (
             <ProjectCard key={index} index={index} project={project} animationProps={projectsTrail[index]} />
           ))}
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };
 
 const ProjectCard = ({ index, project, animationProps }) => {
   return (
     <animated.div
-      className="project-card bg-white rounded-lg shadow-md p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:bg-blue-100"
+      className="project-card bg-white rounded-lg shadow-md p-8 transition-all duration-500 ease-in-out hover:scale-105 hover:bg-blue-100 focus-within:ring-2 focus-within:ring-blue-700"
       style={animationProps}
+      tabIndex="0"
+      role="region"
+      aria-label={project.title}
     >
       <h3 className="text-2xl font-semibold text-gray-800 mb-4">{project.title}</h3>
       <p className="text-gray-600">{project.description}</p>
