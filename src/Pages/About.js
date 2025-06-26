@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring, animated, config } from 'react-spring';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const fadeAnimation = useSpring({ opacity: 1, from: { opacity: 0 }, config: config.molasses });
@@ -72,15 +73,16 @@ const About = () => {
               to our cause. Together, we can make a difference and create a more inclusive society for all.
             </p>
             <div className="flex justify-center">
-              <animated.a
-                href="/team"
-                className="bg-blue-500 text-white py-2 px-6 rounded-full text-2xl hover:bg-blue-600 transition duration-300 hover:shadow-lg focus:outline focus:ring-2 focus:ring-blue-700"
-                style={fadeAnimation}
-                tabIndex="0"
-                aria-label="Get Involved or Ask questions"
-              >
-                Get Involved / Ask questions
-              </animated.a>
+              <animated.div style={fadeAnimation}>
+                <Link
+                  to="/GetInvolved"
+                  className="bg-blue-500 text-white py-2 px-6 rounded-full text-2xl hover:bg-blue-600 transition duration-300 hover:shadow-lg focus:outline focus:ring-2 focus:ring-blue-700"
+                  tabIndex="0"
+                  aria-label="Get Involved or Ask questions"
+                >
+                  Get Involved / Ask questions
+                </Link>
+              </animated.div>
             </div>
           </animated.div>
         </div>
