@@ -9,7 +9,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <img src="/journey-beyond-limits.png" alt="Journey Beyond Limits logo" className="h-14 w-auto mr-3" tabIndex="0" />
+              <h1 className="text-white font-bold text-3xl" tabIndex="0">Journey Beyond Limits</h1>
             </div>
             <nav className="hidden md:block" aria-label="Main navigation">
               <ul className="flex items-center text-lg space-x-6 text-white" role="menubar">
