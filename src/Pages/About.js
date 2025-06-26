@@ -11,7 +11,7 @@ const About = () => {
   });
 
   return (
-    <section className="bg-gray-100 py-16" aria-labelledby="about-title">
+    <section id="main-content" className="bg-gray-100 py-16" aria-labelledby="about-title">
       <div className="container mx-auto px-4">
         <animated.h2 id="about-title" className="text-3xl font-bold text-center text-gray-800 mb-8" style={fadeAnimation} tabIndex="0">
           About Us

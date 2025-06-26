@@ -18,7 +18,7 @@ const ResearchProjects = () => {
   });
 
   return (
-    <main className="bg-gray-100 min-h-screen" role="main">
+    <main id="main-content" className="bg-gray-100 min-h-screen" role="main">
       <div className="max-w-6xl mx-auto px-8 py-16">
         <animated.h2 ref={ref} className="text-3xl font-bold text-center text-gray-800 mb-8" style={titleFadeAnimation} id="research-title" tabIndex="0">
           Research

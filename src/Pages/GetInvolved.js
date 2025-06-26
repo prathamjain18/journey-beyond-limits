@@ -5,6 +5,7 @@ import { useSpring, animated, config } from 'react-spring';
 
 const GetInvolved = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -25,6 +26,7 @@ const GetInvolved = () => {
       opportunitiesInterest: Yup.string()
     }),
     onSubmit: (values, { resetForm }) => {
+      setIsSubmitting(true);
       const emailLink = `mailto:Resasd@dal.ca?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(`
         Name: ${values.name}
         Email: ${values.email}
@@ -39,7 +41,10 @@ const GetInvolved = () => {
 
       resetForm();
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 5000); // Reset submitted state after 5 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        setIsSubmitting(false);
+      }, 5000); // Reset submitted state after 5 seconds
     }
   });
 
@@ -58,7 +63,7 @@ const GetInvolved = () => {
   });
 
   return (
-    <main className="bg-gray-100 py-16" role="main">
+    <main id="main-content" className="bg-gray-100 py-16" role="main">
       <div className="container mx-auto px-4">
         <animated.h2 className="text-3xl font-bold text-center text-gray-800 mb-8" style={fieldAnimation} id="get-involved-title" tabIndex="0">Get Involved</animated.h2>
         <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto" aria-labelledby="get-involved-title" role="form" noValidate>
@@ -209,8 +214,19 @@ const GetInvolved = () => {
             className="bg-blue-500 text-white py-2 px-6 rounded-full text-lg hover:bg-blue-600 transition duration-300 hover:shadow-lg block w-full focus:outline focus:ring-2 focus:ring-blue-700"
             style={fieldAnimation}
             aria-label="Submit form"
+            disabled={isSubmitting}
           >
-            Submit
+            {isSubmitting ? (
+              <span className="flex items-center justify-center">
+                <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                </svg>
+                Submitting...
+              </span>
+            ) : (
+              'Submit'
+            )}
           </animated.button>
         </form>
         {/* Submission confirmation */}

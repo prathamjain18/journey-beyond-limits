@@ -40,7 +40,7 @@ const Home = () => {
   });
 
   return (
-    <main className="bg-gray-100 min-h-screen" role="main">
+    <main id="main-content" className="bg-gray-100 min-h-screen" role="main">
       <div ref={heroRef}>
         <animated.section style={heroAnimation} className="bg-gray-800 text-white py-8" aria-labelledby="home-hero-title">
           <div className="max-w-4xl px-8 py-12 mx-auto text-center">
